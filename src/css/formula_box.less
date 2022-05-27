@@ -1,0 +1,51 @@
+.formula {
+	&.invalid {
+			border-color: var(--danger-outline-color);
+		&:hover {
+			border-color: var(--hovered-danger-outline-color);
+		}
+		&:focus-within {
+			border-color: var(--focused-outline-color);
+		}
+	}
+
+	border: 1px solid var(--main-outline-color);
+	display: inline-grid;
+	grid-template-columns: 1fr auto;
+	min-width: 24ch;
+	>input {
+		font-family: monospace;
+		background-color: transparent;
+		border-color: transparent;
+		margin: -1px;
+		box-sizing: border-box;
+		z-index: 1;
+		&:hover, &:focus {
+			border-color: transparent;
+		}
+	}
+
+	&:hover {
+		border-color: var(--hovered-outline-color);
+	}
+
+	&:focus-within {
+		border-color: var(--focused-outline-color);
+	}
+
+	span.result {
+		color: var(--faded-outline-color);
+		border-left: 1px solid var(--faded-outline-color);
+		height: calc(1rem - 2px);
+		margin: 2px 0;
+		padding: 0 2px;
+		font-size: 0.8rem;
+	}
+}
+
+label:hover .formula {
+	border-color: var(--hovered-outline-color);
+	&.invalid {
+		border-color: var(--hovered-danger-outline-color);
+	}
+}

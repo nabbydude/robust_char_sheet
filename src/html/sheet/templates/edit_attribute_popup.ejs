@@ -1,0 +1,60 @@
+<div class="attribute_popup popup">
+	<div class="header">
+		<h2 class="name hidden_in_edit_mode">Attribute</h2>
+		<div class="name_and_id hidden_in_view_mode">
+			<input type="text" class="name plain_sight" placeholder="Attribute"/>
+			<input type="text" class="id plain_sight" placeholder="attribute"/>
+		</div>
+		<button class="edit icon">
+			<%- svg(include, "view") %>
+			<%- svg(include, "edit") %>
+		</button>
+		<button class="close icon">
+			<%- svg(include, "close") %>
+		</button>
+	</div>
+	<div class="body">
+		<div class="description hidden_in_edit_mode">Description</div>
+		<textarea class="description hidden_in_view_mode" placeholder="Description"></textarea>
+		<div class="counters">
+			<h3>
+				Counters
+			</h3>
+			<button class="add icon hidden_in_view_mode">
+				<%- svg(include, "plus") %>
+			</button>
+			<ul>
+			</ul>
+		</div>
+		<div class="properties">
+			<h3>
+				Properties
+			</h3>
+			<button class="add icon hidden_in_view_mode">
+				<%- svg(include, "plus") %>
+			</button>
+			<ul>
+			</ul>
+		</div>
+		<div class="modifiers">
+			<h3>
+				Modifiers
+			</h3>
+			<button class="add icon hidden_in_view_mode">
+				<%- svg(include, "plus") %>
+			</button>
+			<ul>
+			</ul>
+		</div>
+		<div class="subattributes">
+			<h3>
+				Sub-Attributes
+			</h3>
+			<button class="add icon hidden_in_view_mode">
+				<%- svg(include, "plus") %>
+			</button>
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div>

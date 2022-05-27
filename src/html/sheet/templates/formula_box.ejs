@@ -1,0 +1,7 @@
+<% if(typeof label_class === "undefined") label_class = undefined %>
+<label class="formula<%= label_class ? " " + label_class : "" %>">
+	<input type="text" placeholder="Number or Formula" size="9"/>
+	<span class="result">
+		=?
+	</span>
+</label>

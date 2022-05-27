@@ -1,0 +1,23 @@
+<li>
+	<h4 class="name hidden_in_edit_mode">New Counter</h4>
+	<div class="name_and_id hidden_in_view_mode">
+		<input type="text" class="name plain_sight" placeholder="New Counter"/>
+		<input type="text" class="id plain_sight" placeholder="new_counter"/>
+	</div>
+	<div class="min_max hidden_in_view_mode">
+		<label>
+			Min
+			<%- include("formula_box", { label_class: "min" }) %>
+		</label>
+		<label>
+			Max
+			<%- include("formula_box", { label_class: "max" }) %>
+		</label>
+	</div>
+	<div class="counter_controls">
+		<input type="number" class="value plain_sight" placeholder="0" size="1"/>
+		<button class="up icon" tabindex="-1">&#9650;</button>
+		<button class="down icon" tabindex="-1">&#9660;</button>
+	</div>
+	<button class="delete icon hidden_in_view_mode"><%- svg(include, "trash") %></button>
+</li>

@@ -1,0 +1,25 @@
+<li>
+	<div class="summary hidden_in_edit_mode">
+		<span class="address">
+			address
+		</span>
+		<span class="operation">
+			=
+		</span>
+		<span class="operand">
+			100
+		</span>
+	</div>
+	<input type="text" class="address hidden_in_view_mode" placeholder="Property Name"/>
+	<select class="operation hidden_in_view_mode">
+		<option value="0">=</option>
+		<option value="1">+</option>
+		<option value="2">&minus;</option>
+		<option value="3">&times;</option>
+		<option value="4">&divide;</option>
+		<option value="5">&gt;</option>
+		<option value="6">&lt;</option>
+	</select>
+	<%- include("formula_box", { label_class: "operand hidden_in_view_mode" }) %>
+	<button class="delete icon hidden_in_view_mode"><%- svg(include, "trash") %></button>
+</li>

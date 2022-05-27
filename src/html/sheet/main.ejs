@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="/src/css/sheet.less">
+		<title>Robust Char Sheet Prototype</title>
+	</head>
+	<body>
+		<%- template(include, "edit_attribute_popup") %>
+		<%- template(include, "edit_counter_item") %>
+		<%- template(include, "edit_property_item") %>
+		<%- template(include, "edit_modifier_item") %>
+		<%- template(include, "edit_subattribute_item") %>
+		<%- template(include, "sheet_attribute_item") %>
+		<div id="header">
+			<h1>Character Sheet</h1>
+			<button id="save">Save Character</button>
+			<button id="load">Load Character</button>
+		</div>
+		<div id="sheet">
+			<div class="header">
+				<% for (const field of ["Character Name", "Class", "Player Name", "Race", "Experience", "Level"]) { %>
+					<label id="<%= field.toLowerCase().replace(/ /g, "_") %>">
+						<input type="text"/>
+						<%= field %>
+					</label>
+				<% } %>
+			</div>
+			<div id="abilities">
+				<% for (const ability of ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]) { %>
+					<div data-ability="<%= ability.toLowerCase() %>">
+						<div><%= ability %></div>
+						<div class="ability_mod">0</div>
+						<input type="number" class="ability_score">
+					</div>
+				<% } %>
+			</div>
+			<div class="attributes">
+				<h3>
+					Attributes
+				</h3>
+				<button class="add icon">
+					<%- svg(include, "plus") %>
+				</button>
+				<ul>
+				</ul>
+			</div>
+		</div>
+
+		<div id="popup_container" style="display: none;">
+		</div>
+		<div id="tooltip" role="tooltip" style="display: none;">
+		</div>
+		<script type="module" src="/src/js/index.ts"></script>
+	</body>
+</html>
